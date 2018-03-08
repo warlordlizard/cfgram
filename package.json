@@ -10,7 +10,7 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "test": "DEBUG='cfgram*d' jest -i",
+    "test": "DEBUG='cfgram*' jest -i --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "start": "DEBUG='cfgram*' node server.js"
   },
   "keywords": [],
@@ -22,11 +22,13 @@
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
+    "coveralls": "^3.0.0",
     "debug": "^3.1.0",
     "del": "^3.0.0",
     "dotenv": "^5.0.1",
     "express": "^4.16.2",
     "http-errors": "^1.6.2",
+    "istanbul": "^0.4.5",
     "jsonwebtoken": "^8.2.0",
     "mongoose": "^5.0.8",
     "morgan": "^1.9.0",
