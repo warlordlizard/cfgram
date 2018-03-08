@@ -6,10 +6,11 @@ const Promise = require('bluebird');
 const User = require('../model/user.js');
 const serverToggle = require('../lib/server-toggle.js');
 const server = require('../server.js');
+const PORT = process.env.PORT || 3000;
 
 require('jest');
 
-const url = 'http://localhost:3000';
+const url = `http://localhost:${PORT}`;
 
 const exampleUser = {
   username: 'exampleuser',
